@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Mail, Phone, MapPin, Clock, Github, Linkedin, Twitter, Send } from 'lucide-react';
-
-
+import {MapComponent} from '../components/Map';
 // Contact Page Component
 const ContactPage = () => {
     const [formData, setFormData] = useState({
@@ -17,8 +16,15 @@ const ContactPage = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        // Handle form submission logic here
         console.log('Form submitted:', formData);
+        
+        setFormData({
+            name: '',
+            email: '',
+            message: ''
+        });
+
+        alert('Message sent successfully!');
     };
 
     const handleChange = (e) => {
@@ -27,7 +33,11 @@ const ContactPage = () => {
             [e.target.name]: e.target.value
         });
     };
-
+    // Office location coordinates
+    const officeLocation = {
+        lat: 37.7749,
+        lng: -122.4194
+    };
     return (
         <div className="min-h-screen bg-gradient-to-b from-gray-900 to-gray-800">
             {/* Hero Section */}
@@ -78,7 +88,7 @@ const ContactPage = () => {
                                     </div>
                                     <div>
                                         <p className="text-gray-400">Address</p>
-                                        <p className="text-white">123 Tech Street, Silicon Valley, CA 94025</p>
+                                        <p className="text-white">Sat Bari, New Delhi, Delhi 110074</p>
                                     </div>
                                 </div>
 
@@ -93,14 +103,8 @@ const ContactPage = () => {
                                 </div>
                             </div>
 
-                            {/* Map Placeholder */}
-                            <div className="mt-8 rounded-xl overflow-hidden border border-gray-700">
-                                <img
-                                    src="/api/placeholder/600/300"
-                                    alt="Office Location"
-                                    className="w-full h-48 object-cover"
-                                />
-                            </div>
+                            {/* OpenStreetMap Integration */}
+                            <MapComponent />
                         </div>
                     </div>
 
@@ -168,4 +172,4 @@ const ContactPage = () => {
     );
 };
 
-export { ContactPage };
+export default ContactPage;

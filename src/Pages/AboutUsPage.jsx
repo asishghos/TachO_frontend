@@ -13,7 +13,7 @@ const AboutPage = () => {
     {
       name: "Sarah Johnson",
       role: "CEO & Founder",
-      image: "/api/placeholder/300/300",
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRaUqSojztqZnRXSFvvlm_sX78WOWk7w4ZNxQ&s",
       bio: "Former Google executive with 15 years of experience in tech leadership.",
       social: {
         linkedin: "#",
@@ -24,7 +24,7 @@ const AboutPage = () => {
     {
       name: "Michael Chen",
       role: "CTO",
-      image: "/api/placeholder/300/300",
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRaUqSojztqZnRXSFvvlm_sX78WOWk7w4ZNxQ&s",
       bio: "Tech innovator with expertise in AI and cloud architecture.",
       social: {
         linkedin: "#",
@@ -35,7 +35,7 @@ const AboutPage = () => {
     {
       name: "Emily Rodriguez",
       role: "Head of Design",
-      image: "/api/placeholder/300/300",
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRaUqSojztqZnRXSFvvlm_sX78WOWk7w4ZNxQ&s",
       bio: "Award-winning designer passionate about creating intuitive user experiences.",
       social: {
         linkedin: "#",
@@ -46,7 +46,7 @@ const AboutPage = () => {
     {
       name: "David Kim",
       role: "Lead Developer",
-      image: "/api/placeholder/300/300",
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRaUqSojztqZnRXSFvvlm_sX78WOWk7w4ZNxQ&s",
       bio: "Full-stack developer with a focus on scalable enterprise solutions.",
       social: {
         linkedin: "#",
@@ -129,4 +129,4 @@ const AboutPage = () => {
 };
 
 
-export { AboutPage };
+export default AboutPage ;
