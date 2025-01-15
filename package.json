@@ -9,7 +9,8 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "build:css": "postcss src/index.css -o dist/output.css",
-    "start": "react-scripts start"
+    "start": "react-scripts start",
+    "postinstall": "rm -rf node_modules/rollup/dist/native.js"
   },
   "dependencies": {
     "react": "^18.3.1",
